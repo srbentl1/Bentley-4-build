@@ -34,7 +34,7 @@ header {
     border: .2rem solid black;
 }
 
-/* Flexbox Styles mobile vertical nav bar, section, and section headers */
+/* Flexbox Styles mobile vertical nav bar */
 nav ul {
     display: flex;
     flex-direction: column;
@@ -58,6 +58,7 @@ nav a:hover {
     background-color: #555;
 }
 
+/* Main content and sections */
 main {
     display: flex;
     flex-direction: column;
@@ -123,6 +124,38 @@ footer {
     border: .2rem solid black;
 }
 
-@media (min-width: 100px) {
-    
+/* For desktop layout */
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 240px 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        grid-column: 1 / 3;
+    }
+
+    nav {
+        grid-column: 1;
+    }
+
+    nav ul {
+        position: sticky;
+        top: 30px;
+    }
+
+    main {
+        grid-column: 2;
+    }
+
+    .card-row { 
+        flex-direction: row;
+    }
+
+    footer {
+        grid-column: 1 / 3;
+    }
+
 }
